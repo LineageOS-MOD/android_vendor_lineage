@@ -46,6 +46,9 @@ PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/bin/50-lineage.sh:system/addon.d/50-lineage.sh \
     vendor/lineage/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
+# Bootanimation
+PRODUCT_COPY_FILES += vendor/lineage/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
@@ -101,10 +104,6 @@ endif
 ifeq ($(WITH_TWRP),true)
 include vendor/lineage/config/twrp.mk
 endif
-
-# Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
 
 # Required Lineage packages
 PRODUCT_PACKAGES += \
